@@ -1,3 +1,2 @@
-# startx
 xscreensaver &
 exec startlxqt

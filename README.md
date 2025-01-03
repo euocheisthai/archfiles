@@ -5,6 +5,7 @@
 git clone https://github.com/dmitry-s93/MControlCenter.git
 git clone https://github.com/lm-sensors/lm-sensors.git
 git clone https://github.com/blueman-project/blueman.git
+pacman -S flameshot
 
 # aur helpers
 git clone https://aur.archlinux.org/package-query.git && cd package-query && makepkg -si
