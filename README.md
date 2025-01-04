@@ -39,6 +39,16 @@ In `/etc/lightdm/web-greeter.yml` set `greeter.theme = shikai`, `branding[]` to 
 `git clone --depth 1 https://github.com/wbthomason/packer.nvim.git ~/.local/share/nvim/site/pack/packer/start/packer.nvim` or with AUR `git clone https://aur.archlinux.org/nvim-packer-git.git && cd nvim-packer-git && makepkg -si`
 
 
-## lua configs
+### lua configs
 
 Confiured in `~/.config/nvim/lua/plugins.lua`
+
+## polybar
+
+default as fuck polybar w tabs renamed
+
+## st
+
+- [st](https://st.suckless.org/)
+- [scrollback](https://st.suckless.org/patches/scrollback/)
+- [clipboard](https://st.suckless.org/patches/clipboard/)
