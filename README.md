@@ -13,7 +13,7 @@ git clone https://aur.archlinux.org/yaourt.git && cd yaourt && makepkg -si
 ```
 
 
-## lightdm and shikai greeter
+## lightdm and greeter
 
 `sudo pacman -Syu lightdm` - make sure you have lightdm. If you have sddm, after installing lighttdm:
 ```
@@ -23,15 +23,12 @@ sudo systemctl enable lightdm.service
 
 Check that `/etc/lightdm/lightdm.conf` exists.
 
-
+### greeter
 ```
-git clone --recursive https://github.com/JezerM/nody-greeter.git && cd nody-greeter && makepkg -si
-git clone https://aur.archlinux.org/shikai-theme.git && cd shikai-theme && makepkg -si 
+yay -S lightdm-mini-greeter
 ```
 
-In `/etc/lightdm/lightdm.conf` in `Seat:*` set `greeter-session=nody-greeter`.
-
-In `/etc/lightdm/web-greeter.yml` set `greeter.theme = shikai`, `branding[]` to whatever files you want, but put them in somewhere in `/usr/share/web-greeter/themes/shikai` (or another theme dir).
+In `/etc/lightdm/lightdm.conf` in `Seat:*` set `greeter-session=lightdm-mini-greeter`. Edit `/etc/lightdm/lightdm-mini-greeter.conf`.
 
 
 ## (n)vim
