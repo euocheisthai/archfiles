@@ -4,13 +4,15 @@
 # necessary packages
 git clone https://github.com/dmitry-s93/MControlCenter.git
 git clone https://github.com/lm-sensors/lm-sensors.git
-git clone https://github.com/blueman-project/blueman.git
 git clone https://github.com/euocheisthai/byedpi.git && cd byedpi && make
-pacman -S flameshot extra/xcompmgr
-
-# aur helpers
 git clone https://aur.archlinux.org/package-query.git && cd package-query && makepkg -si
 git clone https://aur.archlinux.org/yaourt.git && cd yaourt && makepkg -si
+
+pacman -S efibootmgr gparted ntfs-3g ntfsprogs gnome-disk-utility xfsprogs extra/sysstat strace dmidecode base-devel openssh extra/bind unzip libinput corectrl i2c-tools i2c-tools libqt5widgets5 qt5-base qt5-base sfml noto-fonts-emoji noto-fonts-emoji tcpdump nmap neovim konsole lscpu core/util-linux gdb core/iptables-nft pkgfile 
+
+# additional 
+pacman -S lxqt xdg-utils sddm nm-tray ttf-freefont extra/github-cli tree alsa-tools alsamixer alsa-utils radare2 hwinfo byedpi-bin lsof bluez bluez-utils blueman xscreensaver extra/arp-scan fltk fcitx5 fcitx-configtool kcm-fcitx libpulse libstatgrab libsysstat lm_sensors
+
 ```
 
 
@@ -57,3 +59,16 @@ Additional:
 ## dmenu
 
 tba
+
+
+### old xinitrc
+
+```
+xset +fp /usr/share/fonts/local 
+xset fp rehash
+xrandr --output Virtual-1 --mode 1920x1080
+xwallpaper --zoom /home/wy/Images/Wallpapers/blackmetal.jpg
+picom -b &
+slstatus &
+exec dwm
+```
