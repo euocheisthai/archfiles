@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fira Code Retina:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Monospace:pixelsize=20:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-    "JetBrainsMono Nerd Font:pixelsize=10:antialias=true:autohint=true"
+    "Monospace:pixelsize=12:antialias=true:autohint=true"
 };
 
 static int borderpx = 0;
