@@ -35,10 +35,7 @@ In `/etc/lightdm/lightdm.conf` in `Seat:*` set `greeter-session=lightdm-mini-gre
 
 `git clone --depth 1 https://github.com/wbthomason/packer.nvim.git ~/.local/share/nvim/site/pack/packer/start/packer.nvim` or with AUR `git clone https://aur.archlinux.org/nvim-packer-git.git && cd nvim-packer-git && makepkg -si`
 
-
-### lua configs
-
-Confiured in `~/.config/nvim/lua/plugins.lua`
+lua configs: confiured in `~/.config/nvim/lua/plugins.lua`
 
 ## polybar
 
@@ -49,3 +46,10 @@ default as fuck polybar w tabs renamed
 - [st](https://st.suckless.org/)
 - [scrollback](https://st.suckless.org/patches/scrollback/)
 - [clipboard](https://st.suckless.org/patches/clipboard/)
+- [alpha](https://st.suckless.org/patches/alpha/)
+- [hidecursor](https://st.suckless.org/patches/hidecursor/)
+
+
+## dmenu
+
+tba

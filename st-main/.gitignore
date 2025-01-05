@@ -1,9 +1,4 @@
-# Compilation files
-config.h
+*.orig
+*.rej
+*.o
 st
-st.o
-x.o
-
-# Patching stuff
-*.c.orig
-*.h.orig
