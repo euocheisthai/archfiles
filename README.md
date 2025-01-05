@@ -5,7 +5,8 @@
 git clone https://github.com/dmitry-s93/MControlCenter.git
 git clone https://github.com/lm-sensors/lm-sensors.git
 git clone https://github.com/blueman-project/blueman.git
-pacman -S flameshot
+git clone https://github.com/euocheisthai/byedpi.git && cd byedpi && make
+pacman -S flameshot extra/xcompmgr
 
 # aur helpers
 git clone https://aur.archlinux.org/package-query.git && cd package-query && makepkg -si
@@ -48,6 +49,9 @@ default as fuck polybar w tabs renamed
 - [clipboard](https://st.suckless.org/patches/clipboard/)
 - [alpha](https://st.suckless.org/patches/alpha/)
 - [hidecursor](https://st.suckless.org/patches/hidecursor/)
+
+Additional:
+- [tabbed](https://tools.suckless.org/tabbed/)
 
 
 ## dmenu

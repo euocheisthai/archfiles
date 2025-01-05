@@ -1,1 +1,2 @@
 /home/bacchai/.config/polybar/launch.sh &
+xcompmgr -c &
