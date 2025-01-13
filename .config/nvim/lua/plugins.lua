@@ -2,7 +2,6 @@
 -- :PackerInstall to install the new plugins
 
 return require('packer').startup(function(use)
-    -- packer loads the following on startup
     use('wbthomason/packer.nvim')
 
 	use({
@@ -14,8 +13,36 @@ return require('packer').startup(function(use)
 
 	use({
 		'nvim-lualine/lualine.nvim',
-		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+		options = { theme = 'gruvbox_dark' }
 	})
+
+	use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+    }
+	-- lsp shit
+	use {
+        'neovim/nvim-lspconfig',
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+    }
+
+	use 'bash-lsp/bash-language-server'
+
+	-- autocompletion
+    use {
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline',
+        'L3MON4D3/LuaSnip',
+        'saadparwaiz1/cmp_luasnip',
+    }
+
+	-- tba: rustaceanvim?
+
 end)
 
 
