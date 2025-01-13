@@ -4,14 +4,18 @@
 return require('packer').startup(function(use)
     -- packer loads the following on startup
     use('wbthomason/packer.nvim')
+
 	use({
 		"nvim-tree/nvim-tree.lua",
-		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional
-		},
+		requires = {"nvim-tree/nvim-web-devicons", opt = true},
 	})
 
 	use { "ellisonleao/gruvbox.nvim" }
+
+	use({
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	})
 end)
 
 
