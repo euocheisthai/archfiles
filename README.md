@@ -8,10 +8,10 @@ git clone https://github.com/euocheisthai/byedpi.git && cd byedpi && make
 git clone https://aur.archlinux.org/package-query.git && cd package-query && makepkg -si
 git clone https://aur.archlinux.org/yaourt.git && cd yaourt && makepkg -si
 
-pacman -S efibootmgr gparted ntfs-3g ntfsprogs gnome-disk-utility xfsprogs extra/sysstat strace dmidecode base-devel openssh extra/bind unzip libinput corectrl i2c-tools i2c-tools libqt5widgets5 qt5-base qt5-base sfml noto-fonts-emoji noto-fonts-emoji tcpdump nmap neovim konsole lscpu core/util-linux gdb core/iptables-nft pkgfile 
+pacman -S efibootmgr gparted ntfs-3g ntfsprogs gnome-disk-utility xfsprogs extra/sysstat broadcom-wl networkmanager strace dmidecode base-devel openssh extra/bind unzip libinput corectrl i2c-tools i2c-tools libqt5widgets5 qt5-base qt5-base sfml noto-fonts-emoji noto-fonts-emoji tcpdump nmap neovim konsole lscpu core/util-linux gdb core/iptables-nft pkgfile 
 
 # additional 
-pacman -S lxqt xdg-utils sddm nm-tray ttf-freefont extra/github-cli tree alsa-tools alsamixer alsa-utils radare2 hwinfo byedpi-bin lsof bluez bluez-utils blueman xscreensaver extra/arp-scan fltk fcitx5 fcitx-configtool kcm-fcitx libpulse libstatgrab libsysstat lm_sensors
+pacman -S lxqt xdg-utils sddm nm-tray ttf-freefont extra/github-cli tree alsa-tools alsamixer alsa-utils radare2 hwinfo byedpi-bin lsof bluez bluez-utils blueman xscreensaver extra/arp-scan fltk fcitx5 fcitx-configtool kcm-fcitx libpulse libstatgrab libsysstat lm_sensors xbindkeys
 
 ```
 
@@ -40,10 +40,6 @@ In `/etc/lightdm/lightdm.conf` in `Seat:*` set `greeter-session=lightdm-mini-gre
 
 lua configs: confiured in `~/.config/nvim/lua/plugins.lua`
 
-## polybar
-
-default as fuck polybar w tabs renamed
-
 ## st
 
 - [st](https://st.suckless.org/)
@@ -56,9 +52,9 @@ Additional:
 - [tabbed](https://tools.suckless.org/tabbed/)
 
 
-## dmenu
+## dmenu & slstatus & dwm
 
-tba
+I forgot
 
 
 ### old xinitrc
