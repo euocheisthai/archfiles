@@ -1,22 +1,14 @@
-/* See LICENSE file for copyright and license details. */
 
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
 #define BROWSER "librewolf"
 
-/* appearance */
-static unsigned int borderpx  = 3;        /* border pixel of windows */
-static unsigned int snap      = 32;       /* snap pixel */
-static unsigned int gappih    = 20;       /* horiz inner gap between windows */
-static unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
-static int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
-static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static int showbar            = 1;        /* 0 means no bar */
-static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "UbuntuMono:size=14", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"  };
+static const unsigned int borderpx  = 5;        /* border pixel of windows */
+static const unsigned int snap      = 32;       /* snap pixel */
+static const int showbar            = 1;        /* 0 means no bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
+static const char *fonts[]          = { "UbuntuMono:size=14" };
 static const char dmenufont[]       = "UbuntuMono:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -27,11 +19,12 @@ static const char col_gruv[]        = "#665c54";
 static const char col_grey_bar[]  = "#a89984";
 
 static const char col_gruv_yellow[]  = "#b57614";
-static char *colors[][3]      = {
+static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray2, col_gray1},
 	[SchemeSel]  = { col_gray4, col_gray1,  col_gruv},
 };
+
 
 typedef struct {
 	const char *name;
@@ -114,12 +107,12 @@ static const char *termcmd[]  = { TERMINAL, NULL };
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "color0",		STRING,	&col_gray1 },
-		{ "color8",		STRING,	&col_gruv },
-		{ "color0",		STRING,	&col_gray2 },
-		{ "color4",		STRING,	&col_gray3 },
-		{ "color0",		STRING,	&col_gray4 },
-		{ "color4",		STRING,	&col_gray1 },
+		{ "color0",		STRING,	&normbordercolor },
+		{ "color8",		STRING,	&selbordercolor },
+		{ "color0",		STRING,	&normbgcolor },
+		{ "color4",		STRING,	&normfgcolor },
+		{ "color0",		STRING,	&selfgcolor },
+		{ "color4",		STRING,	&selbgcolor },
 		{ "borderpx",		INTEGER, &borderpx },
 		{ "snap",		INTEGER, &snap },
 		{ "showbar",		INTEGER, &showbar },
