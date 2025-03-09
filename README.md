@@ -40,6 +40,14 @@ In `/etc/lightdm/lightdm.conf` in `Seat:*` set `greeter-session=lightdm-mini-gre
 
 lua configs: confiured in `~/.config/nvim/lua/plugins.lua`
 
+## dwm & slstatus & dmenu 
+
+dwm: vanitygaps, stacker, shiftview, swallow, scratchpad, sticky; xresources
+
+slstatus: default as of now
+
+dmenu: forgot
+
 ## st
 
 - [st](https://st.suckless.org/)
@@ -50,16 +58,6 @@ lua configs: confiured in `~/.config/nvim/lua/plugins.lua`
 
 Additional:
 - [tabbed](https://tools.suckless.org/tabbed/)
-
-
-## dmenu & slstatus & dwm
-
-dwm: vanitygaps, stacker, shiftview, swallow, scratchpad, sticky; xresources
-
-slstatus: default as of now
-
-dmenu: forgot
-
 
 ### old xinitrc
 
