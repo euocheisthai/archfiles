@@ -54,7 +54,11 @@ Additional:
 
 ## dmenu & slstatus & dwm
 
-I forgot
+dwm: vanitygaps, stacker, shiftview, swallow, scratchpad, sticky; xresources
+
+slstatus: default as of now
+
+dmenu: forgot
 
 
 ### old xinitrc
