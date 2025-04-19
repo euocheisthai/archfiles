@@ -1,2 +1,6 @@
-/home/bacchai/.config/polybar/launch.sh &
 xcompmgr -c &
+xset +fp /usr/local/share/fonts/
+xwallpaper --zoom /home/bacchai/dotfiles/media/centipede.jpg
+xset fp rehash
+slstatus &
+exec dwm 

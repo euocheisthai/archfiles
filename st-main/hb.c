@@ -10,6 +10,17 @@
 
 #define FEATURE(c1,c2,c3,c4) { .tag = HB_TAG(c1,c2,c3,c4), .value = 1, .start = HB_FEATURE_GLOBAL_START, .end = HB_FEATURE_GLOBAL_END }
 
+/*
+ * Replace 0 with a list of font features, wrapped in FEATURE macro, e.g.
+ * FEATURE('c', 'a', 'l', 't'), FEATURE('d', 'l', 'i', 'g')
+ * 
+ * Uncomment either one of the 2 lines below. Uncomment the prior to disable (any) font features. Uncomment the 
+ * latter to enable the (selected) font features.
+ */
+
+hb_feature_t features[] = { 0 };
+//hb_feature_t features[] = { FEATURE('s','s','0','1'), FEATURE('s','s','0','2'), FEATURE('s','s','0','3'), FEATURE('s','s','0','5'), FEATURE('s','s','0','6'), FEATURE('s','s','0','7'), FEATURE('s','s','0','8'), FEATURE('z','e','r','o') };
+
 void hbtransformsegment(XftFont *xfont, const Glyph *string, hb_codepoint_t *codepoints, int start, int length);
 hb_font_t *hbfindfont(XftFont *match);
 
@@ -20,33 +31,6 @@ typedef struct {
 
 static int hbfontslen = 0;
 static HbFontMatch *hbfontcache = NULL;
-
-/* 
- * Replace 0 with a list of font features, wrapped in FEATURE macro, e.g. 
- * FEATURE('c', 'a', 'l', 't'), FEATURE('d', 'l', 'i', 'g')
- * 
- * NOTE: my features are for FiraCode
- */
-hb_feature_t features[] = {
-    FEATURE('s', 's', '0', '1'), // Sans-serif r
-    FEATURE('s', 's', '0', '2'), // Less than/greater than with horizontal bar
-    FEATURE('s', 's', '0', '3'), // Traditional ampersand
-    FEATURE('s', 's', '0', '4'), // Lightweight dollar sign
-    FEATURE('s', 's', '0', '5'), // Traditional at sign
-    FEATURE('s', 's', '0', '6'), // Thin backslash
-    FEATURE('s', 's', '0', '7'), // Regexp matching operator
-    FEATURE('s', 's', '0', '8'), // Gaps in double/triple equals
-    FEATURE('s', 's', '0', '9'), // Compound assignments
-    FEATURE('s', 's', '1', '0'), // Full ligatures
-    FEATURE('c', 'v', '1', '4'), // 3 with flat top
-    FEATURE('c', 'v', '1', '8'), // Percent with filled dots
-    FEATURE('c', 'v', '1', '9'), // Left arrow with horizontal bar (< =)
-    FEATURE('c', 'v', '2', '2'), // LTE with horizontal bar (= <)
-    FEATURE('c', 'v', '2', '3'), // GTE with horizontal bar (> =)
-    FEATURE('c', 'v', '2', '7'), // Box square brackets
-    FEATURE('c', 'v', '2', '9'), // Rounded curly braces
-    FEATURE('c', 'v', '3', '1'), // Brackets (parenthesis)
-};
 
 void
 hbunloadfonts()
@@ -118,6 +102,10 @@ hbtransform(XftGlyphFontSpec *specs, const Glyph *glyphs, size_t len, int x, int
 	for (int i = 0, specidx = 0; i < len; i++) {
 		if (glyphs[i].mode & ATTR_WDUMMY)
 			continue;
+		if (glyphs[i].mode & ATTR_BOXDRAW) {
+			specidx++;
+			continue;
+		}
 
 		if (codepoints[i] != specs[specidx].glyph)
 			((Glyph *)glyphs)[i].mode |= ATTR_LIGA;
