@@ -32,4 +32,4 @@ xrandr --output "$MON" --brightness "$CurrBright"   # Set new brightness
 
 # Display current brightness
 #printf "Monitor $MON "
-#echo $( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 )
+#echo $( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 | grep -Po '[0-9\.]+')
