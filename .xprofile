@@ -1,6 +1,8 @@
 xcompmgr -c &
 xset +fp /usr/local/share/fonts/
-xwallpaper --zoom /home/bacchai/dotfiles/media/centipede.jpg
+xwallpaper --zoom /home/bacchai/wallpapers/pede2.jpg
 xset fp rehash
-slstatus &
+systemctl --user import-environment DISPLAY
+dunst &
+dwmblocks &
 exec dwm 

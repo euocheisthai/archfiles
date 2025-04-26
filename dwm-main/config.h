@@ -242,9 +242,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_Page_Down,  shifttag,               { .i = +1 } },
 	{ MODKEY,			XK_Insert,     spawn,                  SHCMD("xdotool type $(grep -v '^#' ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
 
-	{ MODKEY,			XK_F1,         spawn,                  SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") },
-	{ MODKEY,			XK_F2,         spawn,                  {.v = (const char*[]){ "tutorialvids", NULL } } },
-	{ MODKEY,			XK_F3,         spawn,                  {.v = (const char*[]){ "displayselect", NULL } } },
+	{ MODKEY,			XK_F1,         spawn,                  SHCMD("telegram-desktop") },
+	{ MODKEY,			XK_F2,         spawn,                  SHCMD("firefox") },
+	{ MODKEY,			XK_F3,         spawn,                  SHCMD("codium") },
 	{ MODKEY,			XK_F4,         spawn,                  SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_F5,         xrdb,                   {.v = NULL } },
 	{ MODKEY,			XK_F6,         spawn,                  {.v = (const char*[]){ "torwrap", NULL } } },
@@ -257,8 +257,7 @@ static const Key keys[] = {
 	{ MODKEY,			XK_space,      zoom,                   {0} },
 	{ MODKEY|ShiftMask,		XK_space,      togglefloating,         {0} },
 
-	{ 0,				XK_Print,      spawn,                  SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
-	{ ShiftMask,			XK_Print,      spawn,                  {.v = (const char*[]){ "maimpick", NULL } } },
+	{ 0,				XK_Print,      spawn,                  SHCMD("flameshot gui -r | xclip -selection clipboard -t image/png") },
 	{ MODKEY,			XK_Print,      spawn,		       {.v = (const char*[]){ "dmenurecord", NULL } } },
 	{ MODKEY|ShiftMask,		XK_Print,      spawn,                  {.v = (const char*[]){ "dmenurecord", "kill", NULL } } },
 	{ MODKEY,			XK_Delete,     spawn,                  {.v = (const char*[]){ "dmenurecord", "kill", NULL } } },
@@ -290,8 +289,8 @@ static const Key keys[] = {
 	{ 0, XF86XK_TouchpadToggle,                    spawn,                  SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOff,                       spawn,                  {.v = (const char*[]){ "synclient", "TouchpadOff=1", NULL } } },
 	{ 0, XF86XK_TouchpadOn,                        spawn,                  {.v = (const char*[]){ "synclient", "TouchpadOff=0", NULL } } },
-	{ 0, XF86XK_MonBrightnessUp,                   spawn,                  {.v = (const char*[]){ "xbacklight", "-inc", "15", NULL } } },
-	{ 0, XF86XK_MonBrightnessDown,                 spawn,                  {.v = (const char*[]){ "xbacklight", "-dec", "15", NULL } } },
+	{ 0, XF86XK_MonBrightnessUp,                   spawn,                  {.v = (const char*[]){ "brightness.sh", "Up", NULL } } },
+	{ 0, XF86XK_MonBrightnessDown,                 spawn,                  {.v = (const char*[]){ "brightness.sh", "Down", NULL } } },
 
 	/* { MODKEY|Mod4Mask,           XK_h,          incrgaps,               {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,           XK_l,          incrgaps,               {.i = -1 } }, */
