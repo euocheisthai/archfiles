@@ -6,7 +6,7 @@
 #define BROWSER "librewolf"
 
 /* appearance */
-static unsigned int borderpx  = 3;        /* border pixel of windows */
+static unsigned int borderpx  = 2;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static unsigned int gappih    = 20;       /* horiz inner gap between windows */
 static unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -25,12 +25,28 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char col_gruv[]        = "#665c54";    
 static const char col_grey_bar[]  = "#a89984";
-
 static const char col_gruv_yellow[]  = "#b57614";
+
+static const char gb_col_bg[]       = "#282828";
+static const char gb_col_fg[]       = "#ebdbb2";
+static const char gb_col_red[]      = "#cc241d";
+static const char gb_col_green[]    = "#98971a";
+static const char gb_col_yellow[]   = "#d79921";
+static const char gb_col_blue[]     = "#458588";
+static const char gb_col_purple[]   = "#b16286"; 
+static const char gb_col_aqua[]     = "#689d6a"; 
+
 static char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray2, col_gray1},
 	[SchemeSel]  = { col_gray4, col_gray1,  col_gruv},
+
+	[SchemeStatus]  = { col_fg, col_bg, col_bg }, // default
+	[SchemeStatus2] = { col_green, col_bg, col_bg }, // \x01
+	[SchemeStatus3] = { col_yellow, col_bg, col_bg }, // \x02
+	[SchemeStatus4] = { col_blue, col_bg, col_bg }, // \x03
+	[SchemeStatus5] = { col_aqua, col_bg, col_bg }, // \x04
+	[SchemeStatus6] = { col_red, col_bg, col_bg }, // \x05
 };
 
 typedef struct {
