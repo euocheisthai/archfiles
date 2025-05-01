@@ -4,5 +4,5 @@ xwallpaper --zoom /home/bacchai/wallpapers/pede2.jpg
 xset fp rehash
 systemctl --user import-environment DISPLAY
 dunst &
-dwmblocks &
+dwmblocksasync &
 exec dwm 
