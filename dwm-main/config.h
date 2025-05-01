@@ -16,8 +16,8 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "UbuntuMono:size=14", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"  };
-static const char dmenufont[]       = "UbuntuMono:size=14";
+static char *fonts[]          = { "mono:size=12", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"  };
+static const char dmenufont[]       = "mono:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
