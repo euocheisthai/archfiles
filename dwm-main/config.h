@@ -3,10 +3,10 @@
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
-#define BROWSER "librewolf"
+#define BROWSER "firefox"
 
 /* appearance */
-static unsigned int borderpx  = 2;        /* border pixel of windows */
+static unsigned int borderpx  = 1;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static unsigned int gappih    = 20;       /* horiz inner gap between windows */
 static unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -36,17 +36,19 @@ static const char gb_col_blue[]     = "#458588";
 static const char gb_col_purple[]   = "#b16286"; 
 static const char gb_col_aqua[]     = "#689d6a"; 
 
-static char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray2, col_gray1},
-	[SchemeSel]  = { col_gray4, col_gray1,  col_gruv},
+static char *colors[][9]      = {
+	/*               fg         bg         ColBorder   */
+	[SchemeNorm] = { col_gray3, col_gray2, col_gruv},
+	[SchemeSel]  = { col_gray4, col_gray1,  gb_col_aqua},
 
-	[SchemeStatus]  = { col_fg, col_bg, col_bg }, // default
-	[SchemeStatus2] = { col_green, col_bg, col_bg }, // \x01
-	[SchemeStatus3] = { col_yellow, col_bg, col_bg }, // \x02
-	[SchemeStatus4] = { col_blue, col_bg, col_bg }, // \x03
-	[SchemeStatus5] = { col_aqua, col_bg, col_bg }, // \x04
-	[SchemeStatus6] = { col_red, col_bg, col_bg }, // \x05
+	[SchemeStatus1]  = { gb_col_fg, gb_col_bg, gb_col_bg }, // default
+	[SchemeStatus2] = { gb_col_red, gb_col_bg, gb_col_bg }, // \x01
+	[SchemeStatus3] = { gb_col_yellow, gb_col_bg, gb_col_bg }, // \x02
+	[SchemeStatus4] = { gb_col_green, gb_col_bg, gb_col_bg }, // \x03
+	[SchemeStatus5] = { gb_col_blue, gb_col_bg, gb_col_bg }, // \x04
+	[SchemeStatus6] = { gb_col_aqua, gb_col_bg, gb_col_bg }, // \x05
+	[SchemeStatus7] = { gb_col_purple, gb_col_bg, gb_col_bg }, // \x05
+
 };
 
 typedef struct {

@@ -11,7 +11,7 @@ git clone https://aur.archlinux.org/yaourt.git && cd yaourt && makepkg -si
 pacman -S efibootmgr gparted ntfs-3g ntfsprogs gnome-disk-utility xfsprogs extra/sysstat broadcom-wl networkmanager strace dmidecode base-devel openssh extra/bind unzip libinput corectrl i2c-tools i2c-tools libqt5widgets5 qt5-base qt5-base sfml noto-fonts-emoji noto-fonts-emoji tcpdump nmap neovim konsole lscpu core/util-linux gdb core/iptables-nft pkgfile 
 
 # additional 
-pacman -S lxqt xdg-utils sddm nm-tray ttf-freefont extra/github-cli tree alsa-tools alsamixer alsa-utils radare2 hwinfo byedpi-bin lsof bluez bluez-utils blueman xscreensaver extra/arp-scan fltk fcitx5 fcitx-configtool kcm-fcitx libpulse libstatgrab libsysstat lm_sensors xbindkeys libxft-bgra termusic
+pacman -S lxqt xdg-utils sddm nm-tray ttf-freefont extra/github-cli tree alsa-tools alsamixer alsa-utils radare2 hwinfo byedpi-bin lsof bluez bluez-utils blueman xscreensaver extra/arp-scan fltk fcitx5 fcitx-configtool kcm-fcitx libpulse libstatgrab libsysstat lm_sensors xbindkeys libxft-bgra termusic fff
 
 yay -S mpv-build-git
 
