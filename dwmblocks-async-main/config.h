@@ -23,6 +23,7 @@
     X("eDP-1: ", "xrandr --verbose --current | grep ^'eDP-1' -A5 | tail -n1 | grep -Po '[0-9\.]+'", 10, 0)  \
     X("Mem: ", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g", 30, 0)  \
     X("", "network.sh", 30, 10) \
+    X("ᛋ ", "battery.sh", 30, 10) \
     X("", "date '+%b %d (%a) %I:%M%p'", 5, 10)
 
 #endif  // CONFIG_H
